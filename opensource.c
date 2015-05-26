@@ -30,9 +30,12 @@
 							printf("Length of needle = %d\n", j);
 							printf("Offset value = %d\n",offset);
 							return (i+1-j);
-							break;
 						}	
 				}
+			else if (*(haystack+offset+i) == *(needle)) //Consider the llow case!
+			{
+				j=1;
+			}
 			else{j=0;} //If is not the same - Reset J
 		}
 	return -1; //needle not found
@@ -40,7 +43,7 @@
 
 
 int main()
-{	int position = stripos("helloworld", "or" , 0);
+{	int position = stripos("helloworld", "lldd" , 0);
 	if (position == -1) {
 		printf("Needle is not found in haystack.\n");
 	} 
